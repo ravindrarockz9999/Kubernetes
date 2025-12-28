@@ -57,3 +57,10 @@ spec:
     ports:
     - containerPort: 80
 
+## Kubernetes Pod Commands
+
+Here are the basic commands to work with Pods:
+
+### 1. Create / Apply a Pod
+```bash
+kubectl apply -f pod.yaml
