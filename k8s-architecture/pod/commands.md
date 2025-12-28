@@ -20,19 +20,19 @@ kubectl describe pod <pod-name>
 ## 4. View Pod Logs
 ```yaml
 kubectl logs <pod-name>
-kubectl logs <pod-name> -c <container-name>  # To check init or sidecar container logs. 
+kubectl logs <pod-name> -c <container-name>   # To check init or sidecar container logs. 
 ```
 ## 5. Delete Pods
 ```yaml
-kubectl delete pod <pod-name>  # Delete one pod
-kubectl delete pod --all       # Delete all pods in the same namespace
+kubectl delete pod <pod-name>                 # Delete one pod
+kubectl delete pod --all                      # Delete all pods in the same namespace
 ```
 ## Advance commands
 
 ## 6. Manage Pods Labels
 ```yaml
-kubectl label pod <pod-name> key=value
-kubectl get pods --show-labels
+kubectl label pod <pod-name> key=value        # Adds a new label (or updates an existing label) on the specified Pod.
+kubectl get pods --show-labels                # show all labeles for all pods
 ```
 ## 7. Namespace-specific Commands
 ```yaml
@@ -46,7 +46,7 @@ kubectl port-forward <pod-name> 8080:80
 ```
 ## 9. Open a Terminal in a Pod
 ```yaml
-kubectl exec -it <pod-name> -- bash
+kubectl exec -it <pod-name> -- bash            # To enter inside the Pod
 ```
 ## 10. Expose Pod via Service
 ```yaml
