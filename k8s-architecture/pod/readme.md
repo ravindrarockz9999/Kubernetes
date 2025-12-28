@@ -1,6 +1,6 @@
 # Kubernetes Pod – Simple Explanation
 
-This repository explains what a **Kubernetes Pod** is and how it works in a very simple way.
+Here we learn about a **Kubernetes Pod**, what it is, how it works, and how to create and manage it using basic Kubernetes commands.
 
 ---
 
