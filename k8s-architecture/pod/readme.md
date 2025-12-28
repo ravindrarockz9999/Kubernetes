@@ -57,7 +57,8 @@ spec:
     ports:
     - containerPort: 80
 
-## Example Pod YAML
-we can crate above yaml by using create/apply commad:
+---
+
+we can crate above pod yaml by using create/apply commad:
 
 ```kubectl apply -f pod.yaml
