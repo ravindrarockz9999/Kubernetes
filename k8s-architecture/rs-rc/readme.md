@@ -13,6 +13,7 @@ A **ReplicationController** ensures that a certain number of pod replicas are al
 - Ensures **exact number of pod replicas** are running.  
 - Uses **exact-match selectors** to identify pods.  
 - Usually replaced by ReplicaSet in modern Kubernetes.
+- Not Supported in deployments,statefulsets,etc..
 
 ---
 
@@ -25,6 +26,7 @@ A **ReplicaSet** is the newer version of a ReplicationController with additional
 - Supports **set-based selectors** (`matchLabels` and `matchExpressions`).  
 - Usually **managed by a Deployment** rather than directly.  
 - Maintains desired pod replicas automatically.
+- Fully Supported in deployments,statefulsets,etc..
 
 ---
 
@@ -36,7 +38,7 @@ A **ReplicaSet** is the newer version of a ReplicationController with additional
 | Selector Type            | Exact match only                 | Exact + set-based               |
 | Modern Usage             | Legacy / backward-compatible     | Preferred, often via Deployment|
 | Pod Management           | Maintains pod replicas           | Maintains pod replicas         |
-| Deployment Support       | Not required                     | Typically used by Deployments  |
+| Deployment Support       | Not support                     | Fully supported by Deployments  |
 
 ---
 
