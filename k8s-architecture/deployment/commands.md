@@ -34,6 +34,6 @@ kubectl rollout history deployment/<deployment-name>
 ## 7. Delete Deployment (Change Image Version)
 ```yaml
 kubectl delete deployment <deployment-name>
-kubectl delete --all deployment                                                             # To delete all
-kubectl delete --all deploy -n <namespace-name>                                             # delete all in particular namespace
+kubectl delete --all deployment                                                          # To delete all
+kubectl delete --all deploy -n <namespace-name>                                          # delete all in particular namespace
 ```
