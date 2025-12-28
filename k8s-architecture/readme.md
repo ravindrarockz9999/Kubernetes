@@ -5,7 +5,7 @@ This repository explains **Kubernetes (K8s) architecture** in a simple and easy 
 Kubernetes is a system that helps you **run, manage, and scale applications** using containers (like Docker).
 
 ---
-
+k8s.png
 ## What is Kubernetes?
 Kubernetes is an **orchestration tool** that:
 - Runs applications in containers
