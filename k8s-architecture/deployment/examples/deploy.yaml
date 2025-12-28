@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 5  # Number of pod replicas
+  replicas: 3  # Number of pod replicas
   selector:
     matchLabels:
       app: nginx
@@ -26,5 +26,15 @@ spec:
           limits:
             cpu: "250m"
             memory: "256Mi"
-
-        
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
