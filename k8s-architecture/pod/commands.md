@@ -12,6 +12,7 @@ kubectl run mypod --image=nginx --port=80     # Imperative way to create
 kubectl get pods
 kubectl get pods --watch                      # Watch the pods in Real-Time
 kubectl get pods -o wide                      # Shows extra info like node, Pod IP, and status
+kubectl get pod <pod-name> -o yaml            # Get the yaml of the Pod
 ```
 ## 3. Describe the Pod
 ```yaml
@@ -27,7 +28,7 @@ kubectl logs <pod-name> -c <container-name>   # To check init or sidecar contain
 kubectl delete pod <pod-name>                 # Delete one pod
 kubectl delete pod --all                      # Delete all pods in the same namespace
 ```
-## Advance commands
+# Advance commands
 
 ## 6. Manage Pods Labels
 ```yaml
@@ -46,14 +47,23 @@ kubectl port-forward <pod-name> 8080:80
 ```
 ## 9. Open a Terminal in a Pod
 ```yaml
-kubectl exec -it <pod-name> -- bash            # To enter inside the Pod
+kubectl exec -it <pod-name> -- /bin/sh          # To enter inside the Pod
 ```
 ## 10. Expose Pod via Service
 ```yaml
 kubectl expose pod <pod-name> --type=NodePort --port=80
 kubectl get svc
 ```
-## 10. Apply Multiple YAML Files
+## 11. Apply Multiple YAML Files
 ```yaml
 kubectl apply -f .                  # Apply all YAML files in the current directory (useful for multiple Pods or resources).
 ```
+## 12. Dry Run & Output
+```yaml
+kubectl run testpod --image=nginx --dry-run=client -o yaml
+kubectl get pod mypod -o yaml > mypod.yaml
+```
+## 13. Check Resource Usage
+```yaml
+kubectl top pod
+kubectl top pod <pod-name>
