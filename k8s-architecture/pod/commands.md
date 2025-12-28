@@ -61,7 +61,7 @@ kubectl apply -f .                  # Apply all YAML files in the current direct
 ## 12. Dry Run & Output
 ```yaml
 kubectl run testpod --image=nginx --dry-run=client -o yaml
-kubectl get pod mypod -o yaml > mypod.yaml
+kubectl run testpod --image=nginx --dry-run=client -o yaml > mypod.yaml   # To save the testpod in mypod.yaml file imperatively
 ```
 ## 13. Check Resource Usage
 ```yaml
