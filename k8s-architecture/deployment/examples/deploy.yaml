@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: redis-deployment
   labels:
-    app: nginx
+    app: redis
 spec:
-  replicas: 3  # Number of pod replicas
+  replicas: 2  # Number of Redis pods
   selector:
     matchLabels:
-      app: nginx
+      app: redis
   template:
     metadata:
       labels:
-        app: nginx
+        app: redis
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.23.4  # Use a fixed version, not 'latest'
+      - name: redis
+        image: redis:7.0.11  # Use a fixed version for stability
         ports:
         - containerPort: 80
