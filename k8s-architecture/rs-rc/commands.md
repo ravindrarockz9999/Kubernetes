@@ -1,4 +1,4 @@
-# Kubernetes ReplicationController & ReplicaSet Commands
+# Kubernetes ReplicaSet & ReplicationController Commands
 # ReplicaSet
 ## 1. Create & Apply
 ```yaml
