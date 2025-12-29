@@ -86,34 +86,6 @@ Resources in one namespace do not affect others.
 
 ---
 
-## Creating a Namespace
-### Imperative
-```bash
-kubectl create namespace dev
-```
-### Declarative
-```yaml
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: dev
----
-
-## Using a Namespace
-
-Create a resource in a specific namespace:
-
-```bash
-kubectl run nginx --image=nginx --namespace=dev
-```
-
-List Pods in a namespace:
-
-```bash
-kubectl get pods -n dev
-```
----
-
 ## Resource Quotas and Limits
 
 Namespaces support **resource quotas**, allowing you to:
