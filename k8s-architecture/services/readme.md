@@ -90,7 +90,7 @@ Kubernetes supports **5 main types** of Services:
 - Maps a Service to an external DNS name
 - No selectors or Pods involved
 - Acts as a DNS alias
-- 
+
 ### Use Case
 - Access external services (e.g., databases, APIs)
 - Migration scenarios
@@ -117,3 +117,4 @@ Conclusion
 - Use Headless Services for StatefulSets
 - Always use labels consistently
 
+### All the example service yaml files written in example folder.
