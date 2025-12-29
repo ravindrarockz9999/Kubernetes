@@ -117,4 +117,4 @@ Conclusion
 - Use Headless Services for StatefulSets
 - Always use labels consistently
 
-### All the example service yaml files written in example folder.
+### All Kubernetes Service type YAML files are available in the examples/ folder
