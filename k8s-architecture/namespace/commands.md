@@ -32,10 +32,10 @@ kubectl get pods --all-namespaces                      # Get all pod resources f
 kubectl get all -n <namespace-name>                    # Get all resources
 ```
 ## 4. Delete a Namespace
+### Note: Delete all the resources first before deleting any namespace.
 ```bash
 kubectl delete namespace dev
 kubectl delete ns dev
-### Note: Delete all the resources first before deleting any namespace.
 ```
 ## 5. Labels in Namespace
 ```bash
