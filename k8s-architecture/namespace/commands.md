@@ -28,8 +28,8 @@ kubectl get ns
 kubectl get pods -n <namespace-name>
 kubectl get deployments --namespace=prod
 kubectl describe namespace dev
+kubectl get pods --all-namespaces                      # Get all pod resources for all namespaces
 kubectl get all -n <namespace-name>                    # Get all resources
-kubectl get pods --all-namespaces                      # Get all resources for all namespaces
 ```
 ## 4. Delete a Namespace
 ```bash
