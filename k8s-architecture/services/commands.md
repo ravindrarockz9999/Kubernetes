@@ -5,9 +5,9 @@
 kubectl create -f service.yaml                                                          # Declarative way to create
 kubectl apply -f service.yaml                                                           # Declarative way to create and reapply
 kubectl create svc nodeport <service-name> --tcp=80:8080                                # Imperative way to create svc
-kubectl expose deployment <deploy-name> --name=<svc-name> --port=80 --target-port=8080  # Imperative way to create svc through deploy
-kubectl expose deployment my-app --type=NodePort --name=<svc-name> --port=80            # Imperative way to create svc type nodePort through deploy 
-kubectl expose deployment my-app --type=LoadBalancer --name=<svc-name> --port=80        # Imperative way to create svc type loadBalancer through deploy
+kubectl expose deployment <deploy-name> --name=<svc-name> --port=80 --target-port=8080  # Imperative way to create svc through deployement
+kubectl expose deployment my-app --type=NodePort --name=<svc-name> --port=80            # Imperative way to create svc type nodePort through deployement 
+kubectl expose deployment my-app --type=LoadBalancer --name=<svc-name> --port=80        # Imperative way to create svc type loadBalancer through deployement
 ```
 ## 2. Update Services
 ```yaml
