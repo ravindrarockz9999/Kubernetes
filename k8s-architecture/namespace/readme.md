@@ -87,11 +87,16 @@ Resources in one namespace do not affect others.
 ---
 
 ## Creating a Namespace
-
+### Imperative
 ```bash
 kubectl create namespace dev
 ```
-
+### Declarative
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
 ---
 
 ## Using a Namespace
@@ -107,7 +112,6 @@ List Pods in a namespace:
 ```bash
 kubectl get pods -n dev
 ```
-
 ---
 
 ## Resource Quotas and Limits
