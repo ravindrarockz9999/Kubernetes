@@ -1,4 +1,4 @@
-# Kubernetes Namespace Command:
+# Kubernetes Namespace Commands:
 ## 1. Creating a Namespace
 ### Imperative
 ```bash
