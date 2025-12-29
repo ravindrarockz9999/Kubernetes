@@ -153,8 +153,3 @@ Namespaces work with **Role-Based Access Control (RBAC)** to manage permissions:
 * Essential for scalable and production-ready Kubernetes clusters
 
 ---
-
-## References
-
-* Kubernetes Official Documentation
-* kubectl CLI Reference
