@@ -20,8 +20,8 @@ metadata:
     app: frontend
     environment: production
 ```
-### app=frontend → identifies the application
-### environment=production → identifies the environment
+- app=frontend → identifies the application
+- environment=production → identifies the environment
 
 ## Selectors
 
