@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+spec:
+  affinity:
+    nodeAffinity:
+      # Required rule (hard constraint)
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - frontend
+      # Preferred rule (soft constraint)
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: environment
+            operator: In
+            values:
+            - production
+            - staging
+  containers:
+  - name: frontend
+    image: nginx
