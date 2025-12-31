@@ -1,0 +1,20 @@
+# Here In frontend namespace frontend is wait for backend-svc in backend namespace.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod
+  namespace: frontend
+  labels:
+    app: frontend
+spec:
+  initContainers:
+  - name: wait-for-backend
+    image: busybox
+    command: ['sh', '-c']
+    args: ["until nslookup backend-svc.backend.svc.cluster.local; do echo 'Waiting for backend...'; sleep 2; done; echo 'Backend is ready!'"]  #we call another ns svc by using FQDN
+  containers:
+  - name: frontend
+    image: busybox
+    command: ['sh', '-c', 'echo "Frontend running"; sleep 3600']
+    ports:
+    - containerPort: 8080
