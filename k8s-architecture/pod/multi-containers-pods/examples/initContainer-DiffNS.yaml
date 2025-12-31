@@ -11,7 +11,7 @@ spec:
   - name: wait-for-backend
     image: busybox
     command: ['sh', '-c']
-    args: ["until nslookup backend-svc.backend.svc.cluster.local; do echo 'Waiting for backend...'; sleep 2; done; echo 'Backend is ready!'"]  #we call another ns svc by using FQDN
+    args: ["until nslookup backend-svc.backend.svc.cluster.local; do echo 'Waiting for backend...'; sleep 2; done; echo 'Backend is ready!'"]  # We call another ns svc by using FQDN
   containers:
   - name: frontend
     image: busybox
