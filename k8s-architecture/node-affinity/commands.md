@@ -18,7 +18,7 @@ kubectl label nodes <node-name> <key>=<value>   # craete node label
 kubectl label nodes <node-name> <key>-          # To remove node label just give key '-'
 kubectl get nodes --show-labels                 # Show all labels on all nodes
 ```
-## 4. View Node Resource Usage (CPU, Memory, Pods)
+## 4. View Node Resource Usage (CPU, Memory)
 ```yaml
 kubectl top nodes
 kubectl top node <node-name>      # To see particular node resources
