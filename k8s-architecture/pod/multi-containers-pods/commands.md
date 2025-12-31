@@ -6,7 +6,7 @@
 kubectl exec -it <pod-name> -c <container-name> -- sh                    # Init or sidecar to execute
 ```
 
-### View logs of specific container
+### View logs for specific container
 ```yaml
 kubectl logs <pod-name> -c <container-name>                              # Init or Sidecar logs 
 ```
