@@ -127,5 +127,6 @@ Namespaces work with **Role-Based Access Control (RBAC)** to manage permissions:
 * Namespace provides logical isolation in Kubernetes
 * Helps with organization, security, and resource management
 * Essential for scalable and production-ready Kubernetes clusters
-
 ---
+#### In a Kubernetes cluster, pods can communicate across namespaces by default using IP addresses, but not by short DNS names (DNS requires the namespace or full FQDN). See the clear example in norse.
+##### FDDN Example: default.svc.cluster.local
