@@ -1,3 +1,4 @@
+# Here frontend is wait for backend-svc with port 80 
 apiVersion: v1
 kind: Pod
 metadata:
