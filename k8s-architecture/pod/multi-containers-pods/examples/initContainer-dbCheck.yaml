@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app-pod
+spec:
+  initContainers:
+  - name: wait-for-db
+    image: busybox
+    command: ['sh', '-c']
+    args: ["until nc -z db-service 5432; do echo 'Waiting for database...'; sleep 2; done; echo 'Database is ready!'"]
+  containers:
+  - name: web-app
+    image: my-web-app:1.0
+    ports:
+      - containerPort: 8080
