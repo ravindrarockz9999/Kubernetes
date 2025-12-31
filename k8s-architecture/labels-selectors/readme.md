@@ -42,13 +42,6 @@ selector:
     app: frontend
 ```
 - Selects all Pods with the label app=frontend.
-- 
-```yaml
-kubectl get pods --selector app=frontend
-kubectl get pods -l app=frontend                            # -l shortcut for --selector
-kubectl get deployments --selector environment=production
-kubectl get deployments -l environment=production           # -l shortcut for --selector
-```
 
 ### 2 . Set-based Selectors
 - Matches resources where a label is in a set or is not in a set.
@@ -63,6 +56,13 @@ selector:
       values: ["production", "staging"]
 ```
 - Selects all Pods with the environment label set to either production or staging.
+**Selector Example Commands**
+```yaml
+kubectl get pods --selector app=frontend
+kubectl get pods -l app=frontend                            # -l shortcut for --selector
+kubectl get deployments --selector environment=production
+kubectl get deployments -l environment=production           # -l shortcut for --selector
+```
 
 ## Common Use Cases
 
