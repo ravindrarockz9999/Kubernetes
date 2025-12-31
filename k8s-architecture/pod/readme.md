@@ -112,5 +112,3 @@ This table summarizes the **key differences** between **Static Pods** and **Regu
 
 - **Static Pods:** Node-specific, kubelet-managed, used for critical system components.  
 - **Regular Pods:** API-server managed, scalable, and controlled by controllers for normal workloads.  
-
----
