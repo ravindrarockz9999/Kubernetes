@@ -56,6 +56,7 @@ selector:
       values: ["production", "staging"]
 ```
 - Selects all Pods with the environment label set to either production or staging.
+
 **Selector Example Commands**
 ```yaml
 kubectl get pods --selector app=frontend
