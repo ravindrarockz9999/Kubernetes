@@ -108,11 +108,75 @@ Readiness probe controls traffic
 
 ## Best Practices
 
-Use startup probe for slow-starting apps
+- Use startup probe for slow-starting apps
+- Use readiness probe to protect users from broken dependencies
+- Use liveness probe carefully (bad configs can cause restart loops)
+- Avoid making liveness too strict
 
-Use readiness probe to protect users from broken dependencies
+## Probe timing and behaviour
 
-Use liveness probe carefully (bad configs can cause restart loops)
+## 1️⃣ initialDelaySeconds
 
+Time (in seconds) Kubernetes waits after the container starts before running the first probe.
+**Example**
+```yaml
+initialDelaySeconds: 15       # Default: 0 second
+```
+### Why it exists:
 
-Avoid making liveness too strict
+- Gives your app time to boot
+
+- Prevents early false failures
+
+### Applies to:
+
+- readinessProbe
+- livenessProbe
+- (Usually not needed when using startupProbe)
+
+## 2️⃣ periodSeconds
+
+How often (in seconds) Kubernetes runs the probe.
+**Example**
+```yaml
+periodSeconds: 15            # Default: 10 second
+```
+- “Check health every 15 seconds”
+
+### Applies to:
+All probes
+#### Impact:
+
+- Smaller value → faster detection
+- Larger value → less load on app
+
+## 3️⃣ timeoutSeconds
+
+How long Kubernetes waits for the probe to respond before marking it as failed.
+```yaml
+timeoutSeconds: 2           # Default: 1 second
+```
+
+- If no response in 2 seconds → probe fails
+
+### Applies to:
+All probes
+
+- ⚠️ Too small = false failures under load
+- ⚠️ Too large = slow failure detection
+
+## 4️⃣ failureThreshold
+
+Number of consecutive probe failures required before Kubernetes decides the probe has failed.
+```yaml
+failureThreshold: 3       # Default: 3 failures
+```
+- 3 failures in a row are needed then status pod will failed and status will CrashloopBackoff
+
+## 5️⃣ successThreshold
+
+Number of consecutive successful probe results required for Kubernetes to consider a probe successful again after it has failed.
+```yaml
+successThreshold: 2        # Default: 1 Success
+```
+- 2 successes in a row are required.
