@@ -180,3 +180,4 @@ Number of consecutive successful probe results required for Kubernetes to consid
 successThreshold: 2        # Default: 1 Success
 ```
 - 2 successes in a row are required.
+#### we can see all the probe sample yaml files in example folder
