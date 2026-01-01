@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: probe-exec
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: probe-exec
+  template:
+    metadata:
+      labels:
+        app: probe-exec
+    spec:
+      containers:
+        - name: my-app
+          image: busybox
+          command: ["sh", "-c", "sleep 3600"] # Simulate long-running process
+          
+          startupProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/startup-ready
+            initialDelaySeconds: 9
+            periodSeconds: 5
+            failureThreshold: 5
+            
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/alive
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            failureThreshold: 3
+            
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/ready
+            initialDelaySeconds: 5
+            periodSeconds: 5
