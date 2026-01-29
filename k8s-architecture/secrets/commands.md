@@ -33,6 +33,10 @@ kubectl create secret tls tls-secret \
 ```bash
 kubectl create serviceaccount my-app-sa
 ```
+### f) create secret in declarative way
+```bash
+kubectl apply -f secret.yaml
+```
 ## 2. View Secrets
 ```bash
 kubectl get secrets
@@ -44,6 +48,7 @@ kubectl describe secret app-secret
 kubectl edit secret app-secret
 kubectl delete secret app-secret
 ```
+
 
 
 
