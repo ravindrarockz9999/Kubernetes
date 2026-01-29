@@ -150,3 +150,6 @@ Instead of adding pods, VPA resizes existing pods.
 - Choose HPA for traffic spikes
 - Choose VPA for unpredictable resource usage
 - Combine carefully if needed
+
+### Pre requisite
+- Any metrics server should be installed in your cluster
