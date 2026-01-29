@@ -1,0 +1,18 @@
+# Use ConfigMap with Command-Line Arguments
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-command-args
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["sh", "-c"]
+    args:
+      - echo "Environment is $APP_ENV" && sleep 3600
+    env:
+    - name: APP_ENV
+      valueFrom:
+        configMapKeyRef:
+          name: app-config
+          key: APP_ENV
