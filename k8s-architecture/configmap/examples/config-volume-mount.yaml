@@ -13,3 +13,7 @@ spec:
   - name: config-volume
     configMap:
       name: app-config
+
+# Inside the container
+# /etc/config/APP_ENV
+# /etc/config/DB_NAME
