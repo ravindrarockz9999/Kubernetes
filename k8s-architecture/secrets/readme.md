@@ -53,7 +53,7 @@ Used for:
 - Passwords
 - API tokens
 - Custom credentials
----
+
 ### 2. Docker Registry Secret
 
 Used to authenticate with private container registries.
@@ -63,7 +63,7 @@ type: kubernetes.io/dockerconfigjson
 ```
 #### Use case:
 - Pulling images from private Docker registries
----
+
 ### 3. TLS Secret
 
 Used to store TLS certificates and private keys.
@@ -73,7 +73,7 @@ type: kubernetes.io/tls
 #### Use case:
 - HTTPS
 - Ingress TLS configuration
----
+
 ### 4. Service Account Token Secret
 
 Automatically created by Kubernetes.
