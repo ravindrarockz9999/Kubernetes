@@ -90,20 +90,20 @@ Automatically created by Kubernetes.
 - Enable encryption at rest
 - Rotate Secrets regularly
 - Use external secret managers for production
-
+---
 ### Limitations of Secrets
 
 - Base64 encoding is not encryption
 - Can be exposed if RBAC is misconfigured
 - Still visible to users with cluster access
-
+---
 ### Summary
 
 - Secrets store sensitive information
 - Can be injected as env vars or files
 - More secure than ConfigMaps
 - Essential for production workloads
-
+---
 ## ConfigMap vs Secret: 
 
 | Feature | ConfigMap | Secret |
