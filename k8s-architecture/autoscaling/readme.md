@@ -65,12 +65,12 @@ Instead of adding pods, VPA resizes existing pods.
 
 ### How VPA Works
 
-- VPA monitors historical resource usage.
-- It calculates optimal CPU and memory values.
-- Depending on the mode:
-   Auto: Evicts pods and recreates them with new resource values
-   Initial: Sets resources only at pod creation
-   Off: Only provides recommendations
+1. VPA monitors historical resource usage.
+2. It calculates optimal CPU and memory values.
+3. Depending on the mode:
+   - Auto: Evicts pods and recreates them with new resource values
+   - Initial: Sets resources only at pod creation
+   - Off: Only provides recommendations
   
 ---
 ### Common Use Cases for VPA
