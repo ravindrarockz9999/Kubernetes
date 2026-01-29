@@ -1,8 +1,4 @@
-# Kubernetes Secrets: Commands Cheat Sheet
-
-This section covers all essential **kubectl commands** to manage Secrets in Kubernetes.
-
----
+# Kubernetes Secrets Commands
 
 ## 1. Create Secrets in imperative way
 
